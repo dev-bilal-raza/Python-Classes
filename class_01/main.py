@@ -1,4 +1,6 @@
-my_name: str = "BIlal"
+from myClass import my_name
+
+# my_name: str = "BIlal"
 my_age: int = 12
 is_active: bool = True
 
@@ -42,9 +44,9 @@ user = {
     "Password": "123"
 }
 
-unique_students: set = {students}
+# unique_students: set = {students}
 
-print(f"Unique students: {unique_students}")
+# print(f"Unique students: {unique_students}")
 
 # students = {
 #     "studentNames": ["bilal", "eduction"],
@@ -130,4 +132,10 @@ CVC: %d
 ===============================
 """ % (1, 31243434, 4242424, 123)
 
-print(admin_data)
+print(type(admin_data))
+print("True is: ", True == 1)
+print("False is: ", False == 1)
+
+ADMIN = "bilal"
+
+
