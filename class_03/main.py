@@ -73,6 +73,9 @@ print("IN Operator: ", "bilal" in my_list)
 # not in
 print("NOT IN Operator: ", "bilal" not in my_list)
 
+print("IS Operator: ", "2" is 2)
+print("IS Not Operator: ", "2" is not 2)
+
 # to find all mothods related to data type
 # print(dir("bilal"))
 
