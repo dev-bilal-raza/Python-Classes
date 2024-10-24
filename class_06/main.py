@@ -158,14 +158,45 @@ print("We have sent an email for these users: ", valid_user)
 # print(func("mustafa"))
 
 
-def getUser():
-    user_name = input("Enter Your name here: ")
-    if (user_name == "bilal"):
-        def cv_into_upper():
-            return user_name.upper()
-        print(user_name)
-        return cv_into_upper
+# def getUser():
+#     user_name = input("Enter Your name here: ")
+#     if (user_name == "bilal"):
+#         def cv_into_upper():
+#             # return value will go back where it calls
+#             return user_name.upper()
+#         print(user_name)
+#         return cv_into_upper
 
+# func = getUser()
+# print(func())
 
-func = getUser()
-# print(username)
+import random
+
+rand_num = random.randint(1, 10)
+user_tries = 1
+
+while(user_tries <= 3):
+    print(rand_num)
+    number  = input("\nEnter any number less then 10: ")
+    if (int(number) == rand_num):
+        if (user_tries==1):
+            print(user_tries==True)
+            print("\n🎉 Congratulations 🎉\n")
+        print("\nCorrect number: ", number)
+        print(f"You have entered correct number in {user_tries} tries")
+        break;
+    else:
+        if (user_tries == 3):
+            print("\nYour tries has been ended")
+            print("😓 You have lost this time.\n")
+        else:
+            print(f"\nYou have entered wrong number")
+            print(f"You have {3 - user_tries} tries left")
+            
+        user_tries+=1
+        if(user_tries>3):
+            try_again = input("Do you want to play again? Y/n ")
+            if (try_again.upper() == "Y"):
+                rand_num = random.randint(1, 10)
+                user_tries = 1
+
