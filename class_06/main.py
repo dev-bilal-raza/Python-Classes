@@ -86,18 +86,86 @@ print("We have sent an email for these users: ", valid_user)
 # add_in_db("Bilal")
 
 
-def add_in_db(user_name: str, callback: Callable):
-    if (user_name == "admin"):
-        callback(1, user_name, "Your are an admin")
-    else:
-        callback(0, user_name,"You are a user")
+# Higher Order Function (HOF):
 
-def handler(status: int, user: str, message: str):
-    if (status == 1):
-        print(message)
-        print(f"Valid user: {user}")
-    elif status == 0:
-        print(message)
-        print(f"Invalid user: {user}")
+# def add_in_db(user_name: str, callback: Callable):
+#     if (user_name == "admin"):
+#         callback(1, user_name, "Your are an admin")
+#     else:
+#         callback(0, user_name,"You are a user")
 
-add_in_db("Bilal", handler)
+# def handler(status: int, user: str, message: str):
+#     if (status == 1):
+#         print(message)
+#         print(f"Valid user: {user}")
+#     elif status == 0:
+#         print(message)
+#         print(f"Invalid user: {user}")
+
+# add_in_db("Bilal", handler)
+
+# Recursive Function:
+
+# def simple_recusive():
+#     user_name = input("Enter Your name here: ")
+#     if (user_name == "bilal"):
+#         return simple_recusive()
+
+# simple_recusive()
+# def simple_recusive():
+#     user_name = input("Enter Your name here: ")
+#     if (user_name == "bilal"):
+#         simple_recusive()
+
+# simple_recusive()
+
+# def factorial(num: int):
+#     if (num == 1):
+#         # print(num)
+#         return 1
+#     print(num)
+#     my_fact = num * factorial(num-1)
+    
+#     print("fact: ", my_fact)
+#     return my_fact
+    
+
+# print(factorial(5))
+
+# Clousure Function:
+
+# def cv_into_upper(name: str):
+#     return name.upper()
+
+# def getUser():
+#     user_name = input("Enter Your name here: ")
+#     if (user_name == "bilal"):
+#         return cv_into_upper("bilal")
+
+
+# user_name = getUser()
+# print(user_name)
+
+# def cv_into_upper(name: str):
+#     return name.upper()
+
+# def getUser():
+#     user_name = input("Enter Your name here: ")
+#     if (user_name == "bilal"):
+#         return cv_into_upper
+
+# func = getUser()
+# print(func("mustafa"))
+
+
+def getUser():
+    user_name = input("Enter Your name here: ")
+    if (user_name == "bilal"):
+        def cv_into_upper():
+            return user_name.upper()
+        print(user_name)
+        return cv_into_upper
+
+
+func = getUser()
+# print(username)
