@@ -77,6 +77,6 @@ class Auth:
     def getUsers(self):
         print(self.user_lists)
 
+
 my_auth = Auth()
-my_auth.signup("bilal")    
-my_auth.getUsers()
+my_auth.signup("bilal")
